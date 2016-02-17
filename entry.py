@@ -17,10 +17,11 @@ if __name__ == "__main__":
 
         # 루프가 필요함.
         while True:
-            print(session.heartbeat())
+            session.heartbeat()
+            # @todo
+
             pythoncom.PumpWaitingMessages()
             time.sleep(3)
-
     finally:
         session.logout()
         exit()
