@@ -14,12 +14,12 @@ if __name__ == "__main__":
         info = Information.load("config.conf");
         session = Session()
         session.login(info["server"], info["user"])
+        running = True
 
         # 루프가 필요함.
-        while True:
+        while running:
             session.heartbeat()
             # @todo
-
             pythoncom.PumpWaitingMessages()
             time.sleep(3)
     finally:
