@@ -2,6 +2,7 @@
 *.conf
 *.log
 .idea/
+xing
 
 
 # Byte-compiled / optimized / DLL files

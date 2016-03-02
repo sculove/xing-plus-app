@@ -7,15 +7,13 @@ from xing.logger import LoggerSetting
 from xing.logger import Logger
 from xing.xareal import RealManager
 from xing import xacom
-from modules.information import Information
 LoggerSetting.FILE = "test_xareal.log"
 log = Logger(__name__)
 
 if __name__ == "__main__":
     try:
-        info = Information.load("../config.conf")
         session = Session()
-        session.login(info["server"], info["user"])
+        session.login("../config.conf")
         running = True
 
         # manager 등록

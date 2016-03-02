@@ -6,15 +6,14 @@ import pythoncom
 from xing.logger import LoggerSetting
 from xing.logger import Logger
 from xing.xaquery import Query
-from modules.information import Information
+
 LoggerSetting.FILE = "test_xaquery.log"
 log = Logger(__name__)
 
 if __name__ == "__main__":
     try:
-        info = Information.load("../config.conf")
         session = Session()
-        session.login(info["server"], info["user"])
+        session.login("../config.conf")
         running = True
 
         # 테스트를 위한 루프
