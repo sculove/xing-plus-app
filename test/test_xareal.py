@@ -97,11 +97,9 @@ if __name__ == "__main__":
                     print("-------------- + ------- + --------------")
                     print("%14s | 총 잔량 |%14s " % (ht["totofferrem"],ht["totbidrem"]))
 
-        manager.run(callback)
-
         # 루프가 필요함.
         while running:
-            session.heartbeat()
+            manager.run(callback)
             pythoncom.PumpWaitingMessages()
             time.sleep(3)
     finally:
