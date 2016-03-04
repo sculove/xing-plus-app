@@ -13,8 +13,7 @@ log = Logger(__name__)
 if __name__ == "__main__":
     try:
         session = Session()
-        session.login("../config.conf")
-        running = True
+        running = session.login("../config.conf")
 
         # manager 등록
         manager = RealManager()
